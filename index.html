@@ -1,21 +1,27 @@
 <div id="dp-wrapper-subversion" class="dp-wrapper dp-basic-bar variation-2" style="background-color: #1e2229; color: #ffffff; padding: 24px; border-radius: 12px; max-width: 900px; margin: 0 auto 24px auto; font-family: system-ui, sans-serif; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border: 1px solid #323842;">
     <header class="dp-header" style="background: linear-gradient(135deg, #1c8a24, #0f4d14); padding: 22px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(28, 138, 36, 0.4);">
         <h2 style="margin: 0; font-size: 26px; color: #ffffff; font-weight: 800; display: flex; align-items: center; gap: 10px;">
-            <span>🔄</span> Subversions: Flipping Expectations Arena
+            <span>🔄</span> Subversions vs. Straight Tropes: Flip the Script Arena
         </h2>
-        <p style="margin: 8px 0 0 0; color: #e1ffe3; font-weight: 600; font-size: 14px;">Match the subversion concept to its correct definition zone!</p>
+        <p style="margin: 8px 0 0 0; color: #e1ffe3; font-weight: 600; font-size: 14px;">Sort these cinematic description cards into Traditional Tropes or Intentional Subversions!</p>
     </header>
 
     <div style="display: flex; justify-content: space-between; align-items: center; background-color: #272c35; padding: 14px 22px; border-radius: 8px; margin-bottom: 20px; font-weight: bold; border-left: 6px solid #1c8a24; box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);">
-        <div style="font-size: 16px;">Score: <span id="sub-score" style="color: #55ff66; font-size: 18px;">0</span> / 1</div>
-        <div id="sub-badge" style="background-color: #323842; padding: 4px 12px; border-radius: 20px; font-size: 13px; color: #ffb703;">Expectation Ready 🔍</div>
+        <div style="font-size: 16px;">Score: <span id="sub-score" style="color: #55ff66; font-size: 18px;">0</span> / 3</div>
+        <div id="sub-badge" style="background-color: #323842; padding: 4px 12px; border-radius: 20px; font-size: 13px; color: #ffb703;">Ready to Flip 🔍</div>
         <div style="font-size: 16px;">Streak: 🔥 <span id="sub-streak" style="color: #ff9f43; font-size: 18px;">0</span></div>
     </div>
 
-    <div style="display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 20px;">
-        <div class="sub-zone" data-category="subversion" style="background-color: #272c35; border: 2px dashed #3e4653; border-radius: 8px; padding: 18px; min-height: 120px; transition: all 0.3s ease;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 20px;">
+        <div class="sub-zone" data-category="traditional" style="background-color: #272c35; border: 2px dashed #3e4653; border-radius: 8px; padding: 18px; min-height: 170px; transition: all 0.3s ease;">
             <h3 style="margin-top: 0; color: #55ff66; font-size: 16px; border-bottom: 2px solid #3e4653; padding-bottom: 8px; display: flex; align-items: center; gap: 6px;">
-                <span>☀️</span> Subversion Definition Zone
+                <span>🎬</span> Traditional Genre Trope
+            </h3>
+            <div class="zone-items" style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;"></div>
+        </div>
+        <div class="sub-zone" data-category="subversion" style="background-color: #272c35; border: 2px dashed #3e4653; border-radius: 8px; padding: 18px; min-height: 170px; transition: all 0.3s ease;">
+            <h3 style="margin-top: 0; color: #55ff66; font-size: 16px; border-bottom: 2px solid #3e4653; padding-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+                <span>☀️</span> Intentional Subversion
             </h3>
             <div class="zone-items" style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;"></div>
         </div>
@@ -23,18 +29,26 @@
 
     <div style="background-color: #272c35; padding: 18px; border-radius: 8px; border-top: 4px solid #1c8a24; box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);">
         <h3 style="margin-top: 0; color: #ffffff; font-size: 16px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-            <span>🎟️</span> Concept Card Bank <span style="font-size: 12px; color: #8b949e; font-weight: normal;">(Drag card upward)</span>
+            <span>🎟️</span> Card Bank <span style="font-size: 12px; color: #8b949e; font-weight: normal;">(Drag cards upward)</span>
         </h3>
-        <div id="sub-bank" style="display: flex; flex-wrap: wrap; gap: 12px; min-height: 80px;">
-            <div class="sub-card" draggable="true" id="subc-1" data-category="subversion" style="background-color: #323842; border: 1px solid #485263; border-radius: 8px; padding: 12px; cursor: grab; display: flex; align-items: center; gap: 12px; width: 100%; box-sizing: border-box; transition: transform 0.2s, background-color 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
-                <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=80&q=80" alt="Subversion" style="width: 38px; height: 38px; border-radius: 6px; object-fit: cover;">
-                <span style="font-size: 13px; font-weight: 600; line-height: 1.4;">Using the exact opposite of expected tropes, like horror in bright sunlight</span>
+        <div id="sub-bank" style="display: flex; flex-wrap: wrap; gap: 12px; min-height: 90px;">
+            <div class="sub-card" draggable="true" id="subc-1" data-category="traditional" style="background-color: #323842; border: 1px solid #485263; border-radius: 8px; padding: 12px; cursor: grab; display: flex; align-items: center; gap: 12px; width: calc(50% - 6px); box-sizing: border-box; transition: transform 0.2s, background-color 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=80&q=80" alt="Horror alley" style="width: 38px; height: 38px; border-radius: 6px; object-fit: cover;">
+                <span style="font-size: 13px; font-weight: 600; line-height: 1.4; color: #ffffff;">A horror killer lurking in dark, midnight alleys with creepy shadows</span>
+            </div>
+            <div class="sub-card" draggable="true" id="subc-2" data-category="subversion" style="background-color: #323842; border: 1px solid #485263; border-radius: 8px; padding: 12px; cursor: grab; display: flex; align-items: center; gap: 12px; width: calc(50% - 6px); box-sizing: border-box; transition: transform 0.2s, background-color 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=80&q=80" alt="Sunny terror" style="width: 38px; height: 38px; border-radius: 6px; object-fit: cover;">
+                <span style="font-size: 13px; font-weight: 600; line-height: 1.4; color: #ffffff;">Gruesome, terrifying rituals taking place in bright, cheerful daylight</span>
+            </div>
+            <div class="sub-card" draggable="true" id="subc-3" data-category="traditional" style="background-color: #323842; border: 1px solid #485263; border-radius: 8px; padding: 12px; cursor: grab; display: flex; align-items: center; gap: 12px; width: 100%; box-sizing: border-box; transition: transform 0.2s, background-color 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                <img src="https://images.unsplash.com/photo-1533588964736-1f99222c009d?auto=format&fit=crop&w=80&q=80" alt="Western desert" style="width: 38px; height: 38px; border-radius: 6px; object-fit: cover;">
+                <span style="font-size: 13px; font-weight: 600; line-height: 1.4; color: #ffffff;">A lone Western hero riding into a dusty frontier town for a dramatic shootout</span>
             </div>
         </div>
     </div>
 
     <div id="sub-feedback" style="margin-top: 16px; padding: 14px; border-radius: 8px; text-align: center; font-weight: bold; display: none; font-size: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);"></div>
-    <button id="sub-reset" style="background-color: #1c8a24; color: #ffffff; border: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 16px; display: none; width: 100%; font-size: 16px; box-shadow: 0 4px 12px rgba(28, 138, 36, 0.4);">🔄 Play Again</button>
+    <button id="sub-reset" style="background-color: #1c8a24; color: #ffffff; border: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 16px; display: none; width: 100%; font-size: 16px; box-shadow: 0 4px 12px rgba(28, 138, 36, 0.4);">🔄 Play Again &amp; Master Subversions</button>
 </div>
 
 <script>
@@ -70,24 +84,31 @@
                 card.style.cursor = 'default'; card.style.width = '100%'; card.style.transform = 'none'; card.style.boxShadow = 'none'; card.style.backgroundColor = '#213028'; card.style.border = '1px solid #1c8a24';
                 subScore++; subStreak++;
                 subScoreEl.textContent = subScore; subStreakEl.textContent = subStreak;
-                subBadge.textContent = "🏆 Twist Master!"; subBadge.style.color = "#ffd700";
-                
-                subFeedback.innerHTML = "🎉 <strong>Brilliant!</strong> Subversions mastered!";
-                subFeedback.style.backgroundColor = "rgba(28, 138, 36, 0.25)"; subFeedback.style.border = "1px solid #1c8a24"; subFeedback.style.color = "#55ff66"; subFeedback.style.display = 'block'; subResetBtn.style.display = 'block';
+
+                if (subStreak === 1) { subBadge.textContent = "🔍 Sharp Eye!"; subBadge.style.color = "#55ff66"; }
+                else if (subStreak === 2) { subBadge.textContent = "⚡ Twist Expert!"; subBadge.style.color = "#ff9f43"; }
+                else if (subStreak === 3) { subBadge.textContent = "🏆 Master Subverter!"; subBadge.style.color = "#ffd700"; }
+
+                if (subScore === 3) {
+                    subFeedback.innerHTML = "🎉 <strong>Brilliant!</strong> You successfully sorted traditional tropes from intentional subversions!";
+                    subFeedback.style.backgroundColor = "rgba(28, 138, 36, 0.25)"; subFeedback.style.border = "1px solid #1c8a24"; subFeedback.style.color = "#55ff66"; subFeedback.style.display = 'block'; subResetBtn.style.display = 'block';
+                }
             } else {
-                subStreak = 0; subStreakEl.textContent = subStreak; subBadge.textContent = "❌ Wrong Move!"; subBadge.style.color = "#ff6b6b";
-                subFeedback.innerHTML = "💥 <strong>Wrong Zone!</strong> Try again!";
+                subStreak = 0; subStreakEl.textContent = subStreak; subBadge.textContent = "❌ Plot Twist!"; subBadge.style.color = "#ff6b6b";
+                subFeedback.innerHTML = "💥 <strong>Wrong Zone!</strong> That doesn't belong in this category. Try again!";
                 subFeedback.style.backgroundColor = "rgba(255, 107, 107, 0.15)"; subFeedback.style.border = "1px solid #ff6b6b"; subFeedback.style.color = "#ff6b6b"; subFeedback.style.display = 'block';
-                setTimeout(() => { subFeedback.style.display = 'none'; subBadge.textContent = "Expectation Ready 🔍"; }, 2200);
+                setTimeout(() => { subFeedback.style.display = 'none'; if(subStreak === 0) subBadge.textContent = "Ready to Flip 🔍"; }, 2200);
             }
         });
     });
 
     subResetBtn.addEventListener('click', () => {
         subScore = 0; subStreak = 0; subScoreEl.textContent = subScore; subStreakEl.textContent = subStreak;
-        subBadge.textContent = "Expectation Ready 🔍"; subBadge.style.color = "#ffb703"; subFeedback.style.display = 'none'; subResetBtn.style.display = 'none';
+        subBadge.textContent = "Ready to Flip 🔍"; subBadge.style.color = "#ffb703"; subFeedback.style.display = 'none'; subResetBtn.style.display = 'none';
         subCards.forEach(card => {
-            card.setAttribute('draggable', 'true'); card.style.cursor = 'grab'; card.style.width = '100%'; card.style.backgroundColor = '#323842'; card.style.border = '1px solid #485263'; card.style.boxShadow = '0 4px 6px rgba(0,0,0,0.3)';
+            card.setAttribute('draggable', 'true'); card.style.cursor = 'grab';
+            card.style.width = card.dataset.category === 'traditional' && card.id === 'subc-3' ? '100%' : 'calc(50% - 6px)';
+            card.style.backgroundColor = '#323842'; card.style.border = '1px solid #485263'; card.style.boxShadow = '0 4px 6px rgba(0,0,0,0.3)';
             subBank.appendChild(card);
         });
     });
